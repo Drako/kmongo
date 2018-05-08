@@ -26,4 +26,13 @@ public abstract class AbstractWithObjectId {
 
     @BsonId
     protected ObjectId id;
+
+    public String getID() {
+        return (id == null) ? null : id.toString();
+    }
+
+    public AbstractWithObjectId setID(final ObjectId id) {
+        this.id = id;
+        return this;
+    }
 }
